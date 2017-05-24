@@ -59,9 +59,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\ApplicationSettingscs.cs" />
     <Compile Include="Helpers\KeystrokeHelper.cs" />
     <Compile Include="Helpers\SikuliSetup.cs" />
-    <Compile Include="Helpers\WhiteHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\WindowDriver.cs" />
   </ItemGroup>

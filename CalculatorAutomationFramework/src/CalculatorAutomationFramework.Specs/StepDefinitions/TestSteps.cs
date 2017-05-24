@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CalculatorAutomationFramework.Common.Helpers;
+using CalculatorAutomationFramework.PageObject.PageFactory;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,23 +12,25 @@ namespace CalculatorAutomationFramework.Specs.StepDefinitions
     [Binding]
     public sealed class TestSteps
     {
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+        [Given(@"calculator application is open")]
+        public void GivenCalculatorApplicationIsOpen()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("Calculator",WindowDriver.Instance.Title);
         }
 
-        [When(@"I press add")]
-        public void WhenIPressAdd()
+        [When(@"I enter two ""(.*)"" ""(.*)"" number and do a matamatical fucntion to them ""(.*)""")]
+        public void WhenIEnterTwoNumberAndDoAMatamaticalFucntionToThem(string firstNumber, string secondNumber, string function)
         {
-            ScenarioContext.Current.Pending();
+            Pages.CalculatorHomePage.Calculate(firstNumber,secondNumber,function);
         }
 
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+        [Then(@"the result should be this ""(.*)""")]
+        public void ThenTheResultShouldBeThis(string result)
         {
-            ScenarioContext.Current.Pending();
+            Assert.True(Pages.CalculatorHomePage.ReturnCalculatedResult().Contains(result));
         }
+
+
 
     }
 }
