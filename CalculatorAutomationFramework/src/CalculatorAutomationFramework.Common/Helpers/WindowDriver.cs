@@ -32,7 +32,7 @@ namespace CalculatorAutomationFramework.Common.Helpers
             foreach (var t in windows)
             {
                 var str = t.Title;
-                if (str.Contains(newWindowTitle))
+                if (str.Equals(newWindowTitle))
                     //compare which window title is matching to your string
                     Window = t;
             }
