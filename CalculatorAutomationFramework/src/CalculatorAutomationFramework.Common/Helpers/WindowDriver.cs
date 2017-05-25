@@ -16,11 +16,11 @@ namespace CalculatorAutomationFramework.Common.Helpers
         public static Window GrabWindow()
         {
             //var sikuliSetup = new Setup();
-           // Application = Application.Launch("C:\\Windows\\System32\\calc1.exe");
+            Application = Application.Launch("C:\\Windows\\System32\\calc1.exe");
             //sikuliSetup.ConfirmDefaultPropertiesWindow();
 
-            //Window = Application.GetWindow(ApplicationTitle);
-            Window = SwitchWindow(ApplicationTitle);
+            Window = Application.GetWindow(ApplicationTitle);
+            // Window = SwitchWindow(ApplicationTitle);
 
             return Window;
         }
@@ -36,7 +36,7 @@ namespace CalculatorAutomationFramework.Common.Helpers
                 if (str.Equals(newWindowTitle))
                     //compare which window title is matching to your string
                     Window = t;
-            //    Assert.True(Window != null);
+                //    Assert.True(Window != null);
             }
 
             //  window = window.ModalWindow(newWindowTitle);
