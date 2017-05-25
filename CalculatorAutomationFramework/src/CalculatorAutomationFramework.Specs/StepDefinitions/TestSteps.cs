@@ -15,6 +15,9 @@ namespace CalculatorAutomationFramework.Specs.StepDefinitions
         [Given(@"calculator application is open")]
         public void GivenCalculatorApplicationIsOpen()
         {
+            Console.WriteLine();
+            Console.WriteLine("I AM HERE");
+            Console.WriteLine();
             Assert.AreEqual("Calculator",WindowDriver.Instance.Title);
         }
 
