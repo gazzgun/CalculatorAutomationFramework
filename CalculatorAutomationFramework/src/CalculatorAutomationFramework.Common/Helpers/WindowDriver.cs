@@ -1,4 +1,5 @@
-﻿using TestStack.White;
+﻿using NUnit.Framework;
+using TestStack.White;
 using TestStack.White.UIItems.WindowItems;
 
 namespace CalculatorAutomationFramework.Common.Helpers
@@ -35,6 +36,7 @@ namespace CalculatorAutomationFramework.Common.Helpers
                 if (str.Equals(newWindowTitle))
                     //compare which window title is matching to your string
                     Window = t;
+            //    Assert.True(Window != null);
             }
 
             //  window = window.ModalWindow(newWindowTitle);
