@@ -21,7 +21,7 @@ namespace CalculatorAutomationFramework.Common.Helpers
             //Assert.True(Application != null);
             //Window = Application.GetWindow(ApplicationTitle);
             Window = SwitchWindow(ApplicationTitle);
-
+            Assert.True(Window!=null,"Cant Grab Window Instance");
             return Window;
         }
 
