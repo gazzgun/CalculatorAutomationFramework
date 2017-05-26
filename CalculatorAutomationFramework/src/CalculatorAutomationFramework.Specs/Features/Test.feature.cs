@@ -68,7 +68,7 @@ namespace CalculatorAutomationFramework.Specs.Features
         [NUnit.Framework.TestCaseAttribute("2", "2", "Add", "4", new string[0])]
         [NUnit.Framework.TestCaseAttribute("5", "3", "Subtract", "2", new string[0])]
         [NUnit.Framework.TestCaseAttribute("8", "2", "Subtract", "6", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("5", "1", "Subtract", "1", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("5", "1", "Subtract", "4", new string[0])]
         public virtual void TestingVariousCalculations(string firstNumber, string secondNumber, string function, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Testing Various Calculations", exampleTags);
