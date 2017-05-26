@@ -15,10 +15,10 @@ namespace CalculatorAutomationFramework.Specs.StepDefinitions
         [Given(@"calculator application is open")]
         public void GivenCalculatorApplicationIsOpen()
         {
-            Console.WriteLine();
-            Console.WriteLine("I AM HERE");
-            Console.WriteLine();
-            Assert.AreEqual("Calculator",WindowDriver.Instance.Title);
+           //Console.WriteLine();
+           //Console.WriteLine("I AM HERE");
+           //Console.WriteLine();
+           //Assert.AreEqual("Calculator",WindowDriver.Instance.Title);
         }
 
         [When(@"I enter two ""(.*)"" ""(.*)"" number and do a matamatical fucntion to them ""(.*)""")]
