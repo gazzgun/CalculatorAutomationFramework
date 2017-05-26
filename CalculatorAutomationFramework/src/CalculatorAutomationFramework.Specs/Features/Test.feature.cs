@@ -109,6 +109,20 @@ this.ScenarioSetup(scenarioInfo);
             this.TestingVariousCalculations("5", "3", "Subtract", "2", ((string[])(null)));
 #line hidden
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Testing Various Calculations: 8")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Test")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "8")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:First Number", "8")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Second Number", "2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Function", "Subtract")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Result", "6")]
+        public virtual void TestingVariousCalculations_8()
+        {
+            this.TestingVariousCalculations("8", "2", "Subtract", "6", ((string[])(null)));
+#line hidden
+        }
     }
 }
 #pragma warning restore
