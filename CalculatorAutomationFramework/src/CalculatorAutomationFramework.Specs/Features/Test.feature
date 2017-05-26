@@ -10,6 +10,8 @@ Scenario Outline: Testing Various Calculations
 	| 2            | 2             | Add      | 4      |
 	| 5            | 3             | Subtract | 2      |
 	| 8            | 2             | Subtract | 6      |
+	| 5            | 1             | Subtract | 1      |
+
 	
 	
 	

@@ -15,13 +15,8 @@ namespace CalculatorAutomationFramework.Common.Helpers
 
         public static Window GrabWindow()
         {
-            //var sikuliSetup = new Setup();
-            //Application = Application.Launch("C:\\Windows\\System32\\calc1.exe");
-            //sikuliSetup.ConfirmDefaultPropertiesWindow();
-            //Assert.True(Application != null);
-            //Window = Application.GetWindow(ApplicationTitle);
-            Window = SwitchWindow(ApplicationTitle);
-            Assert.True(Window!=null,"Cant Grab Window Instance");
+            Application = Application.Launch("C:\\Windows\\System32\\calc1.exe");
+            Window = Application.GetWindow(ApplicationTitle);
             return Window;
         }
 
