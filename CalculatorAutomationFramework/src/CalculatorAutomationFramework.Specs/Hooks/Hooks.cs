@@ -11,7 +11,7 @@ namespace CalculatorAutomationFramework.Specs.Hooks
     [Binding]
     public sealed class Hooks
     {
-        [BeforeFeature]
+        [BeforeTestRun]
         public static void BeforeFeature()
         {
             SikuliSetup.CreateSession();
