@@ -23,6 +23,7 @@ namespace CalculatorAutomationFramework.PageObject
 
         private IPattern fileWindow = Patterns.FromFile(@"C:\Users\Gary Gunning\Source\Repos\CalculatorAutomationFramework\CalculatorAutomationFramework\src\CalculatorAutomationFramework.PageObject\SikuliImages\FileWindow.PNG");
         private IPattern fileBrowserWindow= Patterns.FromFile(@"C:\Users\Gary Gunning\Source\Repos\CalculatorAutomationFramework\CalculatorAutomationFramework\src\CalculatorAutomationFramework.PageObject\SikuliImages\FileBrowserWindow.PNG");
+        private IPattern closeWindow = Patterns.FromFile(@"C:\Users\Gary Gunning\Source\Repos\CalculatorAutomationFramework\CalculatorAutomationFramework\src\CalculatorAutomationFramework.PageObject\SikuliImages\CloseWindow.PNG");
 
         public void SwitchTo(string calcType)
         {
@@ -42,6 +43,10 @@ namespace CalculatorAutomationFramework.PageObject
         public bool VerifyFileBrowserWindow()
         {
             return Session.Wait(fileBrowserWindow,10);
+        }
+        public void CloseWindow()
+        {
+            Session.Click(closeWindow);
         }
     }
 }

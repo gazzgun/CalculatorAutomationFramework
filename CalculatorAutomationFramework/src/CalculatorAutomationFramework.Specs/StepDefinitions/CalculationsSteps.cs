@@ -40,6 +40,8 @@ namespace CalculatorAutomationFramework.Specs.StepDefinitions
         public void ThenTheFileBrowserShouldBeOpen()
         {
             Assert.True(Pages.SientificCalculator.VerifyFileBrowserWindow());
+            Pages.SientificCalculator.CloseWindow();
+
         }
 
 
