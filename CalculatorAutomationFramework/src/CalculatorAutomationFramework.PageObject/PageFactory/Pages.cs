@@ -12,6 +12,7 @@ namespace CalculatorAutomationFramework.PageObject.PageFactory
 
         #region Pages
         public static CalculatorHomePage CalculatorHomePage => GetPage<CalculatorHomePage>();
+        public static SientificCalculator SientificCalculator => GetPage<SientificCalculator>();
         #endregion
 
         public static T GetPage<T>()where T : new()

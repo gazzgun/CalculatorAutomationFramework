@@ -18,20 +18,20 @@ namespace CalculatorAutomationFramework.Specs.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Test")]
-    public partial class TestFeature
+    [NUnit.Framework.DescriptionAttribute("Calculations")]
+    public partial class CalculationsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Test.feature"
+#line 1 "Calculations.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Test", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Calculations", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,22 +64,31 @@ namespace CalculatorAutomationFramework.Specs.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Testing Various Calculations")]
+        [NUnit.Framework.DescriptionAttribute("Calculation Test")]
         [NUnit.Framework.TestCaseAttribute("2", "2", "Add", "4", new string[0])]
         [NUnit.Framework.TestCaseAttribute("5", "3", "Subtract", "2", new string[0])]
         [NUnit.Framework.TestCaseAttribute("8", "2", "Subtract", "6", new string[0])]
         [NUnit.Framework.TestCaseAttribute("5", "1", "Subtract", "4", new string[0])]
-        public virtual void TestingVariousCalculations(string firstNumber, string secondNumber, string function, string result, string[] exampleTags)
+        public virtual void CalculationTest(string firstNumber, string secondNumber, string function, string result, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Testing Various Calculations", exampleTags);
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculation Test", exampleTags);
+#line 3
 this.ScenarioSetup(scenarioInfo);
+#line 4
+ testRunner.Given("the application is open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "First Number",
+                        "Second Number",
+                        "Function"});
+            table1.AddRow(new string[] {
+                        string.Format("{0}", firstNumber),
+                        string.Format("{0}", secondNumber),
+                        string.Format("{0}", function)});
 #line 5
- testRunner.Given("calculator application is open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
- testRunner.When(string.Format("I enter two \"{0}\" \"{1}\" number and do a matamatical fucntion to them \"{2}\"", firstNumber, secondNumber, function), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 7
- testRunner.Then(string.Format("the result should be this \"{0}\"", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I enter the following", ((string)(null)), table1, "When ");
+#line 8
+ testRunner.Then(string.Format("I should see this \"{0}\"", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

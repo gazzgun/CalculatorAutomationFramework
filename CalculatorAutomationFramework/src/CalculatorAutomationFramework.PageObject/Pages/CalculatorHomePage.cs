@@ -1,5 +1,7 @@
-﻿using CalculatorAutomationFramework.Common.Helpers;
+﻿using CalculatorAutomationFramework.Common;
+using CalculatorAutomationFramework.Common.Helpers;
 using CalculatorAutomationFramework.PageObject.PageFactory;
+using SikuliSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,8 @@ namespace CalculatorAutomationFramework.PageObject.Pages
 {
     public class CalculatorHomePage : BasePage
     {
+
+
         private Button equalsButton = WindowDriver.Instance.Get<Button>("Equals");
         private Label  resulTtextBox = WindowDriver.Instance.Get<Label>(SearchCriteria.ByAutomationId("150"));
 

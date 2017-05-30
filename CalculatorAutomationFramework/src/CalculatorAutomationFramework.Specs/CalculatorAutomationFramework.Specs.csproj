@@ -49,16 +49,25 @@
       <HintPath>..\..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
     <Reference Include="TestStack.White, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2672efbf3e161801" />
+    <Reference Include="WindowsInput, Version=1.0.4.0, Culture=neutral, PublicKeyToken=9b287f7dc5073cad, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CalculatorAutomationFramework.PageObject\bin\Debug\WindowsInput.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\Test.feature.cs">
+    <Compile Include="Features\Calculations.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Test.feature</DependentUpon>
+      <DependentUpon>Calculations.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks\Hooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StepDefinitions\TestSteps.cs" />
+    <Compile Include="Features\VerifyCalculatorType.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerifyCalculatorType.feature</DependentUpon>
+    </Compile>
+    <Compile Include="StepDefinitions\CalculationsSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -66,11 +75,15 @@
     <None Include="Batch\GenerateLivingDoc.bat" />
     <None Include="Batch\RunBDDTest.bat" />
     <None Include="Batch\StepDefinitionReport.bat" />
-    <None Include="Features\Test.feature">
+    <None Include="Features\Calculations.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Test.feature.cs</LastGenOutput>
+      <LastGenOutput>Calculations.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Features\VerifyCalculatorType.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>VerifyCalculatorType.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CalculatorAutomationFramework.Common\CalculatorAutomationFramework.Common.csproj">
@@ -85,5 +98,6 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
