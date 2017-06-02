@@ -81,7 +81,9 @@
     <Content Include="SikuliImages\FileBrowserWindow.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SikuliImages\FileWindow.PNG" />
+    <Content Include="SikuliImages\FileWindow.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
